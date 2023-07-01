@@ -1,0 +1,40 @@
+<div class="card">
+    <div class="card-body">
+        <h5 class="titulo">Crear Tarjeta</h5>
+        <form [formGroup]="form" (ngSubmit)="CrearTarjeta()">
+            <div class="input-group mb-3 ">
+                <span class="input-group-text" [class.green-icon]="this.form.get('titular')?.valid" [class.red-icon]="this.form.get('titular')?.invalid && this.form.get('titular')?.touched">
+                    <img src="https://cdn-icons-png.flaticon.com/128/2102/2102647.png" data-src="https://cdn-icons-png.flaticon.com/128/2102/2102647.png" alt="User " title="User " width="32" height="32" class="lzy lazyload--done" srcset="https://cdn-icons-png.flaticon.com/128/2102/2102647.png 4x">
+                </span>
+                <input type="text" formControlName="titular" class="form-control" placeholder="Nombre de Usuario">
+              </div>
+              <div class="input-group mb-3 ">
+                <span class="input-group-text" [class.green-icon]="this.form.get('NumeroTarjeta')?.valid" [class.red-icon]="this.form.get('NumeroTarjeta')?.invalid && this.form.get('NumeroTarjeta')?.touched">
+                    <img src="https://cdn-icons-png.flaticon.com/128/3344/3344835.png" data-src="https://cdn-icons-png.flaticon.com/128/3344/3344835.png" alt="Credit cards " title="Credit cards " width="32" height="32" class="lzy lazyload--done" srcset="https://cdn-icons-png.flaticon.com/128/3344/3344835.png 4x"></span>          
+                     <input type="text" formControlName="NumeroTarjeta" class="form-control" maxlength="16" placeholder="Número Tarjeta">
+              </div>
+              <div class="row">
+                <div class="col-lg-7">
+                    <div class="input-group mb-3 ">
+                        <span class=" input-group-text" [class.green-icon]="this.form.get('FechaExpiracion')?.valid" [class.red-icon]="this.form.get('FechaExpiracion')?.invalid && this.form.get('FechaExpiracion')?.touched">
+                            <img src="https://cdn-icons-png.flaticon.com/128/7325/7325100.png" data-src="https://cdn-icons-png.flaticon.com/128/7325/7325100.png" alt="Subscription" title="Subscription" width="32" height="32" class="lzy lazyload--done" srcset="https://cdn-icons-png.flaticon.com/128/7325/7325100.png 4x"> </span> 
+                              <input type="text"  formControlName="FechaExpiracion" class="form-control" maxlength="5" placeholder="MM/YY">
+                      </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="input-group mb-3 ">
+                        <span class="input-group-text" [class.green-icon]="this.form.get('cvv')?.valid" [class.red-icon]="this.form.get('cvv')?.invalid && this.form.get('cvv')?.touched">
+                            <img src="https://cdn-icons-png.flaticon.com/128/962/962805.png" srcset="https://cdn-icons-png.flaticon.com/128/962/962805.png 4x" alt="Cvv" width="32" height="32">               </span>
+                        <input type="password"  formControlName="cvv" class="form-control" maxlength="3" placeholder="CVV">
+                      </div>
+                </div>
+            </div>
+            <div class="d-grid gap-2">
+                <button class="btn btn-success btn-lg" type="submit">
+                    <img src="https://cdn-icons-png.flaticon.com/128/689/689401.png" data-src="https://cdn-icons-png.flaticon.com/128/689/689401.png" alt="Server " title="Server " width="23" height="24" class="lzy lazyload--done" srcset="https://cdn-icons-png.flaticon.com/128/689/689401.png 4x">
+                    &nbsp;Aceptar</button>
+              </div>
+        </form>
+    </div>
+
+</div>
